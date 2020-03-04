@@ -130,13 +130,16 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 10% 0%;
-        width: 55%;
+        padding: 6% 0%;
+        width: 60%;
 
         .serviceHalf {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
         }
+
         &:nth-child(1)::before {
                 position: absolute;
                 bottom: 0%;
@@ -146,9 +149,8 @@
         
 
         .service {
-            width: 45%;
+            width: 96%;
             height: 25%;
-            margin-bottom: 2%;
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -158,13 +160,18 @@
                 height: 100%;
             }
 
-            .img {
-                border: 2px solid
-                black;
+            i {
+                font-size: 30px;
+                border: 2px
+                black solid;
+                width: 55px;
+                height: 55px;
                 border-radius: 50%;
-                padding: 3%;
-                height: 62px;
-                width: 124px;
+                padding-top: 10px;
+            }
+
+            .img {
+                text-align: center;
             }
 
             .textBlock {
@@ -185,3 +192,73 @@
         color: $black;
     }
 }
+
+.team {
+    .title {
+        font: $header2;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 6%;
+    }
+
+
+    .grid {
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        
+        h4 {
+            font: $header2;
+            margin-bottom: 0;
+        }
+
+        .member {
+            flex: 1 0 20%;
+        }
+
+        .member.double {
+            flex-basis: 50%;
+            padding: 4%;
+            background-color: $whiteTwo;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+
+            p {
+                font: $bodyFont;
+            }
+        }
+
+        .member.single {
+            // flex-basis: 50%;
+            padding: 4%;
+            background-color: $whiteTwo;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            h4 {
+                margin: auto;
+            }
+        }
+    }
+
+    
+    &::after {
+        content: '';
+        width: 1px;
+        height: 12%;
+        background: #80808078;
+        position: absolute;
+        left: 50%;
+        bottom: -6%;
+    }
+}
+
+
+
+
+
