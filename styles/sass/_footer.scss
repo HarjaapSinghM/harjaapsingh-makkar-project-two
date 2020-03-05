@@ -1,0 +1,89 @@
+footer {
+    background-color: $black;
+    color: $whiteTwo;
+    padding: 6% 0% 0%;    
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .section {
+        width: 30%;
+
+        h4 {
+            font: $buttonFont;
+        }
+
+        p,
+        ul {
+            font: $bodyFont;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            padding: 0;
+        }
+    }
+
+    .section.recent {
+        ul {
+            padding-left: 20%;
+        }
+        h4 {
+            text-align: center;
+        }
+    }
+
+    .section.sub {
+        text-align: right;
+
+        .inputter {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        input[type=email] {
+            padding: 1rem 1rem;
+            color:gray;
+            border: 1px solid white;
+            width: 60%;
+        }
+
+        .submitter {
+            background-color: $lightSage;
+            display: inline-block;
+            padding: 1rem;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($lightSage, 10%)
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        font: $buttonFont;
+        border-top: 1px solid white;
+        padding: 2%;
+        margin-top: 3%;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .social {
+        font-size: 2rem;
+        display: flex;
+        justify-content: flex-start;
+
+        i:nth-child(2) {
+            margin: 0rem 2rem;
+        }
+    }
+}

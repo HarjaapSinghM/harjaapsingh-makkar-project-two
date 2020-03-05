@@ -1,0 +1,26 @@
+@media (max-width: 1450px) {
+    .wrapper {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    header .topNav {
+        width: 35%;
+    }
+}
+
+@media (max-width: 850px) {
+    header .topNav {
+        display: none;
+    }
+
+    header nav .hamburger {
+        display: block;
+        font-size: 4rem;
+    }
+}
