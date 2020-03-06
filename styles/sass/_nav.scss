@@ -36,7 +36,9 @@ header {
         .hamburger {
             display: none;
 
-            %:hover
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 

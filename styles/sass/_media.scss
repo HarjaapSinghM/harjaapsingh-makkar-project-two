@@ -4,6 +4,16 @@
     }
 }
 
+@media (max-width: 1300px) {
+    .wideWrapper {
+        width: 90%;
+    }
+
+    .services .serviceContent {
+        width: 70%;
+    } 
+}
+
 @media (max-width: 1050px) {
     .wrapper {
         width: 90%;
@@ -11,6 +21,10 @@
 
     header .topNav {
         width: 35%;
+    }
+
+    .viewPortfolio .textHolder {
+        padding: 0% 5%;
     }
 }
 
@@ -22,5 +36,152 @@
     header nav .hamburger {
         display: block;
         font-size: 4rem;
+    }
+
+    .imgHolder .rotator {
+        left: -15%;
+        top: -23%;
+        width: 30%;
+    }
+
+    .services .serviceContent {
+        width: 80%;
+    }
+
+    footer {
+
+        .wrapper {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .section {
+            width: 50%;
+
+            &.sub {
+                width: 100%;
+                text-align: center;
+    
+                .inputter {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .services .serviceContent {
+	    width: 90%;
+    }
+
+    .team .grid {
+        flex-wrap: wrap;
+
+        .member {
+            width: 49%;
+        }
+
+        &.bottom{
+            .member:nth-child(3),
+            .member:nth-child(4) {
+                 margin-top: 2%;
+            }
+        }
+    }
+
+    .team .grid .member.double {
+        flex-basis: 100%;
+        margin-bottom: 2%;
+    }
+
+    .viewPortfolio .button {
+        padding: 1rem 2rem;
+    }
+
+}
+
+@media (max-width: 606px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .imgHolder {
+        width: 86%;
+        min-width: 0rem;
+    }
+    .card {
+        width: 100%;
+
+        &:nth-child(1) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .services {
+
+        .serviceContent {
+            flex-direction: column;
+            width: 100%;
+
+            .service {
+                height: auto;
+            }
+
+            .serviceHalf {
+                width: 100%;
+            }
+        }
+    }
+
+    .viewPortfolio .half {
+        height: 34rem;
+        width: 100%;
+
+        &.imgHolder2 {
+            width: 100%;
+        }
+    }    
+}
+
+@media (max-width: 500px) {
+    .imgHolder {
+        height: 19rem;
+        
+        .rotator {
+            display: none;
+        }
+    }
+
+    .testi .para {
+        width: 90%;
+    }
+
+    footer {
+        .social {
+            justify-content: center;
+        }
+        .section {
+            width: 100%;
+            text-align: center;
+
+            &.recent {
+                margin: 7% 0%;
+                
+                ul {
+                    padding-left: 0%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .imgHolder {
+        height: 15rem;
+    }
+
+    .viewPortfolio .half {
+        height: 27rem;
     }
 }
