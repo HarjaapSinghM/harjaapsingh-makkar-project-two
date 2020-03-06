@@ -346,6 +346,10 @@ header .topNav a:hover::before {
   top: 6px;
 }
 
+.blog .hero {
+  background-image: url(../blog/images/blog-1.jpeg);
+}
+
 .pros {
   padding: 12% 5% 7%;
   background-color: #C3DAB7;
@@ -809,7 +813,7 @@ footer .copyright {
   text-align: center;
   font: normal normal normal 1.4rem/2.4rem "Montserrat", sans-serif;
   border-top: 1px solid white;
-  padding: 4%;
+  padding: 3%;
   margin-top: 3%;
 }
 
@@ -967,6 +971,9 @@ footer .social i:nth-child(2) {
   }
   .testi .para {
     width: 90%;
+  }
+  footer .copyright {
+    padding: 4%;
   }
   footer .social {
     -webkit-box-pack: center;
