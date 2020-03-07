@@ -85,5 +85,14 @@ footer {
         i:nth-child(2) {
             margin: 0rem 2rem;
         }
+
+        i {
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: $darkerGray;
+                cursor: pointer;
+            }
+        }
     }
 }

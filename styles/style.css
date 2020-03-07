@@ -259,7 +259,8 @@ html {
   margin: 0 auto;
 }
 
-h1 {
+h1,
+h2 {
   font: normal normal bold 3.7rem/1 "Montserrat", sans-serif;
   top: 20px;
   text-align: center;
@@ -273,7 +274,7 @@ h1 {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 200px;
   position: relative;
 }
 
@@ -306,13 +307,14 @@ header nav .hamburger:hover {
 }
 
 header .topNav {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
+  width: 24%;
   font: normal normal normal 1.4rem/1 "Montserrat", sans-serif;
   list-style: none;
   text-transform: uppercase;
@@ -346,11 +348,43 @@ header .topNav a:hover::before {
   top: 6px;
 }
 
+header .topNav:nth-child(2):nth-child(4) {
+  position: relative;
+}
+
+header .topNav:nth-child(2):nth-child(4)::after {
+  content: 'abc';
+  width: 10px;
+  height: 10px;
+}
+
 .blog .hero {
   background-image: url(../blog/images/blog-1.jpeg);
 }
 
 .blog .hero::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+}
+
+.overallNav {
+  background: white;
+}
+
+.contact header nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contact .hero {
+  background-image: url(../contact/images/contact-1.jpeg);
+  background-position: left;
+  min-height: 200px;
+  height: 24vh;
+}
+
+.contact .hero::after {
   content: '';
   width: 0px;
   height: 0px;
@@ -950,6 +984,12 @@ p {
   border: none;
   border-bottom: 1px solid #80808073;
   padding: 1rem 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.leaveComment form *:focus {
+  border-bottom: 1px solid black;
 }
 
 .leaveComment form textarea {
@@ -972,6 +1012,87 @@ p {
   cursor: pointer;
   color: #333333;
   border: 1px solid #333333;
+}
+
+.contact h3 {
+  font: normal normal normal 1.4rem/1 "Montserrat", sans-serif;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.contact p {
+  color: #808080DE;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.pageTitle {
+  height: calc(100% - 62px);
+}
+
+.pageTitle .wrapper {
+  height: 100%;
+}
+
+.pageTitle .wrapper .titleContent {
+  position: absolute;
+  padding: 6rem 0;
+}
+
+.pageTitle .wrapper .titleContent h1 {
+  position: relative;
+  text-align: left;
+}
+
+.pageTitle .wrapper .titleContent h1::before {
+  content: ' ';
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: -22px;
+  left: 0%;
+  background-color: black;
+}
+
+.pageTitle span {
+  display: block;
+}
+
+.details {
+  padding-top: 5rem;
+}
+
+.channels {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding: 5rem 0;
+}
+
+.channels i {
+  font-size: 3rem;
+}
+
+.channels .channel {
+  padding-left: 13%;
+}
+
+.channels .channel:nth-child(2) {
+  border-right: 2px solid #8080801A;
+  border-left: 2px solid #8080801A;
+}
+
+.channels .heading {
+  color: black;
+  font: normal normal normal 1.4rem/1 "Montserrat", sans-serif;
+  letter-spacing: 6px;
+  font-weight: bold;
 }
 
 footer {
@@ -1077,6 +1198,16 @@ footer .social {
 
 footer .social i:nth-child(2) {
   margin: 0rem 2rem;
+}
+
+footer .social i {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+footer .social i:hover {
+  color: #808080DE;
+  cursor: pointer;
 }
 
 @media (max-width: 1450px) {
@@ -1231,6 +1362,22 @@ footer .social i:nth-child(2) {
   }
   .leaveComment form input[type=submit] {
     margin: 0 auto;
+  }
+  .channels {
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .channels .channel {
+    padding: 5% 0% 5% 5%;
+  }
+  .channels .channel:nth-child(2) {
+    border-top: 2px solid #8080801A;
+    border-bottom: 2px solid #8080801A;
+    border-right: none;
+    border-left: none;
+    padding: 8% 0% 0% 5%;
   }
 }
 

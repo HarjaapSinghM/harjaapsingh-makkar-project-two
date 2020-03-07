@@ -1,4 +1,4 @@
-
+// Home
 .pros {
     padding: 12% 5% 7%;
     background-color: $lightSage;
@@ -28,9 +28,6 @@
         }
     }   
 }
-
-
-
 
 .imgHolder {
     position: relative;
@@ -67,7 +64,6 @@
     }
 }
 
-// Testi
 .testi {
     padding: 10% 0%;
 
@@ -324,7 +320,7 @@
     }
 }
 
-// Blog specific
+// Blog 
 h3 {
     font: $header2;
     border-bottom: 1px solid $gray;
@@ -336,7 +332,6 @@ p {
 }
 
 .runAgency {
-
     h1 {
         text-align: left;
     }
@@ -518,6 +513,11 @@ p {
             border: none;
             border-bottom: 1px solid $gray;
             padding: 1rem 0;
+            transition: all 0.3s ease;
+
+            &:focus {
+                border-bottom: 1px solid black;
+            }
         }
 
         textarea {
@@ -543,10 +543,83 @@ p {
     }
 }
 
+// Contact
+.contact {
+    h3 {
+        font: $navFont;
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    p {
+        color: $darkerGray;
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: bold;
+    }
+}
+
+.pageTitle {
+    height: calc(100% - 62px);
+
+    .wrapper {
+        height: 100%;
+
+        .titleContent {
+            position: absolute;
+            padding: 6rem 0;
+
+            h1 {
+                position: relative;
+                text-align: left;
+            }
+
+            h1::before {
+                content: ' ';
+                width: 30px;
+                height: 2px;
+                position: absolute;
+                top: -22px;
+                left: 0%;
+                background-color: black;
+            }
+        }
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.details {
+    padding-top: 5rem;
+}
 
 
+.channels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding: 5rem 0;
 
+    i {
+        font-size: 3rem;
+    }
 
+    .channel {
+        padding-left: 13%;
+    }
+    .channel:nth-child(2) {
+        border-right: 2px solid $lighterGray;
+        border-left: 2px solid $lighterGray;
+    }
 
-
-
+    .heading {
+        color: black;
+        font: $navFont;
+        letter-spacing: 6px;
+        font-weight: bold;
+    }
+}

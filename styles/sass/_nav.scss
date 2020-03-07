@@ -1,4 +1,5 @@
-h1 {
+h1,
+h2 {
     font: $header1;
     top: 20px;
     text-align: center;
@@ -12,7 +13,7 @@ h1 {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 200px;
     position: relative;
 
     &::after {
@@ -28,7 +29,6 @@ h1 {
 
 
 header {
-
     nav {
     display: flex;
     justify-content: space-between;
@@ -43,17 +43,17 @@ header {
     }
 
     .topNav {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    font: $navFont;
-    list-style: none;
-    text-transform: uppercase;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 24%;
+        font: $navFont;
+        list-style: none;
+        text-transform: uppercase;
 
         li:hover {
             cursor: pointer;
         }
-
         
         a {
             text-decoration: none;
@@ -77,14 +77,48 @@ header {
                 top: 6px;
             }
         }
+
+        &:nth-child(2):nth-child(4) {
+            position: relative;
+        
+            &::after{
+                content: 'abc';
+                width: 10px;
+                height: 10px;
+            }
+        }
     }
 }
-
 // Blog Specific 
 
 .blog {
     .hero {
         background-image: url(../blog/images/blog-1.jpeg);
+        
+        &::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+        }
+    }
+}
+
+// Contact specific
+.overallNav {
+    background: white;
+}
+
+.contact {
+    header nav {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero {
+        background-image: url(../contact/images/contact-1.jpeg);
+        background-position: left;
+        min-height: 200px;
+        height: 24vh;
         
         &::after {
             content: '';

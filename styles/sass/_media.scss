@@ -170,7 +170,25 @@
             margin: 0 auto;
         }
     }
+
+    .channels {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto;
+
+        .channel {
+            padding: 5% 0% 5% 5%;
+
+            &:nth-child(2) {
+                border-top: 2px solid #8080801A;
+                border-bottom: 2px solid #8080801A;
+                border-right: none;
+                border-left: none;
+                padding: 8% 0% 0% 5%;
+            }  
+        }
+    }
 }
+
 
 @media (max-width: 530px) {
     .runAgency .authorInfo {
