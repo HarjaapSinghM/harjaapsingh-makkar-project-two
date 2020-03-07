@@ -28,6 +28,23 @@
     }
 }
 
+@media (max-width: 952px) {
+    .runAgency .authorInfo {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 25px;
+
+        .card:not(:first-child) {
+            margin: auto 0;
+            text-align: center;
+        }
+        
+        .card.author {
+            justify-content: center;
+            grid-column: 1/-1;
+        }
+    }
+}
+
 @media (max-width: 850px) {
     header .topNav {
         display: none;
@@ -110,6 +127,7 @@
         width: 86%;
         min-width: 0rem;
     }
+
     .card {
         width: 100%;
 
@@ -141,7 +159,42 @@
         &.imgHolder2 {
             width: 100%;
         }
-    }    
+    }
+    
+    .leaveComment form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 28px;
+
+        input[type=submit] {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .runAgency .authorInfo {
+        grid-template-columns: 1fr;
+        grid-column-gap: 9px;
+        margin: 0rem 0;
+        grid-row-gap: 0px;
+        grid-template-rows: repeat(3, 0.75fr);
+        
+        .card.author {
+            justify-content: flex-start;
+        }
+        
+        .card:not(:first-child) {
+            text-align: left;
+        }
+    }
+
+    .related .postGrid {
+        grid-template-rows: repeat(3, 73vw);
+        grid-column-gap: 1rem;
+        grid-row-gap: 7rem;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 500px) {

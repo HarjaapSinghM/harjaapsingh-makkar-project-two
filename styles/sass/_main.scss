@@ -17,17 +17,20 @@
         text-align: center;
         margin-bottom: 6rem;
     }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        .card {
+            width: 45%;
+        }
+    }   
 }
 
-.cards {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
 
-.card {
-    width: 45%;
-}
+
 
 .imgHolder {
     position: relative;
@@ -261,7 +264,7 @@
         content: '';
         width: 1px;
         height: 12%;
-        background: #80808078;
+        background: $gray;
         position: absolute;
         left: 50%;
         bottom: -6%;
@@ -320,6 +323,226 @@
         width: 40%;
     }
 }
+
+// Blog specific
+h3 {
+    font: $header2;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 1rem;
+}
+
+p {
+    font: $bodyFont;
+}
+
+.runAgency {
+
+    h1 {
+        text-align: left;
+    }
+    padding: 5% 0%;
+
+    p {
+        color: $gray;
+        font-weight: bold;
+        span {
+            color: black;
+            font-weight: bolder;
+        }
+    }
+
+    .authorInfo {
+        display: grid;
+        grid-template-columns: 45% repeat(3, 1fr);
+        // grid-template-rows: 1fr;
+        grid-column-gap: 6px;
+        grid-row-gap: 0px; 
+        border-bottom: 1px solid #80808073;
+        padding: 2rem 0;
+        margin: 4rem 0;
+
+        .card {
+
+            &:not(:first-child) {
+                margin: auto 0;
+            }
+
+            .authorText {
+                margin: auto 1rem;
+            }
+
+            img {
+                border-radius: 50%;    
+            }
+        }
+        .card.author {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        h4 {
+            font: $buttonFont;
+            margin: 0;
+        }
+
+        p {
+            font: $bodyFont;
+            font-size: 1.2rem;
+            color: grey;
+            margin: 0;
+        }
+    }
+
+    .post {
+        font: $navFont;
+
+        p:nth-child(1) {
+            color: black;
+            font-weight: bolder;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 15%;
+            min-width: 130px;
+
+            i {
+                transition: all 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    color: lighten(black, 40%);
+                }
+            }
+        }
+    }
+}
+
+.related {
+    .postGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 0px;
+
+        figure {
+            margin: 0;
+
+            figcaption {
+                font: $navFont;
+                text-transform: uppercase;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: 1.5rem;
+            }
+        }
+    } 
+}
+
+.comments {
+	padding: 7rem 0 3rem;
+
+    .commentBox {
+        display: grid;
+        grid-template-columns: 1fr 11fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        margin-bottom: 2rem;
+
+        .comment {
+            background-color: $lighterGray;
+            color: $darkerGray;
+            padding: 1.2rem 1.85rem;
+            position: relative;
+
+            p {
+                font: $navFont;
+                font-size: 1rem;
+                line-height: 1.8rem;
+            }
+
+            &::after {
+                content: ' ';
+                width: 0; 
+                height: 0; 
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent; 
+                border-right:10px solid $lighterGray; 
+                position: absolute;
+                display: block;
+                top: 4%;
+                left: -10px;
+            }
+            
+            
+            p:nth-child(1) {
+                color: black;
+
+                span {
+                    font-style: italic;
+                    color: darkgreen;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: lighten(darkgreen, 10%);
+                    }
+                }
+            }
+            * {
+            margin: 0;
+            }
+            
+        }
+    }
+}
+
+.leaveComment {
+    padding: 0rem 0 10rem;
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 4fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+
+        * {
+            border: none;
+            border-bottom: 1px solid $gray;
+            padding: 1rem 0;
+        }
+
+        textarea {
+            grid-column: 1/-1;
+            resize: none;
+        }
+
+        input[type=submit] {
+            width: 100px;
+            font-weight: bolder;
+            background-color:white;
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+            transition: all 0.5s ease;
+
+            &:hover {
+                cursor: pointer;
+                color: $black;
+                border: 1px solid $black;
+            }
+        }
+    }
+}
+
 
 
 
