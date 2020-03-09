@@ -1355,10 +1355,10 @@ footer .social i:hover {
     width: 86%;
     min-width: 0rem;
   }
-  .card {
+  .pros .cards .card {
     width: 100%;
   }
-  .card:nth-child(1) {
+  .pros .cards .card:nth-child(1) {
     margin-bottom: 2rem;
   }
   .services .serviceContent {

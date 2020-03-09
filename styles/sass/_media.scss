@@ -132,11 +132,14 @@
         min-width: 0rem;
     }
 
-    .card {
-        width: 100%;
+    
+    .pros .cards {
+        .card {
+            width: 100%;
 
-        &:nth-child(1) {
-            margin-bottom: 2rem;
+            &:nth-child(1) {
+                margin-bottom: 2rem;
+            }
         }
     }
 
@@ -191,6 +194,7 @@
             }  
         }
     }
+
 }
 
 
