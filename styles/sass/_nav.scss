@@ -51,6 +51,27 @@ header {
         list-style: none;
         text-transform: uppercase;
 
+        li {
+            position: relative;
+
+            .cartItems {
+                position: absolute;
+                border-radius: 50%;
+                background-color: #C3DAB7;
+                bottom: -10px;
+                font-size: 0.7rem;
+                width: 15px;
+                height: 15px;
+                text-align: center;
+                margin: 0 auto;
+                white-space: nowrap;
+                padding: -1px;
+                display: flex;
+                align-items: center;
+                right: -5px;
+            }
+        }
+
         li:hover {
             cursor: pointer;
         }
@@ -87,6 +108,8 @@ header {
                 height: 10px;
             }
         }
+
+
     }
 }
 // Blog Specific 

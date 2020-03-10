@@ -320,6 +320,31 @@ header .topNav {
   text-transform: uppercase;
 }
 
+header .topNav li {
+  position: relative;
+}
+
+header .topNav li .cartItems {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #C3DAB7;
+  bottom: -10px;
+  font-size: 0.7rem;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  padding: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: -5px;
+}
+
 header .topNav li:hover {
   cursor: pointer;
 }
